@@ -16,9 +16,10 @@
   }  
 </script>
 <div class="advert">
-  <div class="leftTitle">
-    <p><img src="images/landian.gif" alt="title">推荐企业广告信息</p>
-    <div>
+  <div class="leftTitle" background="images/line.gif">
+    <p>&nbsp;&nbsp;<img src="images/landian.gif" alt="title">&nbsp;&nbsp;推荐企业广告信息</p>
+  </div>
+  <div>
 <?php
 include("conn/conn.php");
 // include("js/function.php");
@@ -41,16 +42,22 @@ else
   }
 }
 ?>
-    </div>
+    
   </div>
 </div>
 <div class="search">
   <div class="leftTitle">
-    <p><img src="images/landian.gif" alt="title">信息快速检索</p>
+    <p>&nbsp;&nbsp;<img src="images/landian.gif" alt="title">&nbsp;&nbsp;信息快速检索</p>
   </div>
   <div class="doSearch">
     <form name="form1" method="post" action="findinfo.php"> 
-      <select name="type">
+    <p>
+      <label for="keywords">关键字：</label>
+      <input type="text" id="keywords" name="keywords">
+    </p>
+    <div>
+      <label for="type">条件：&nbsp;&nbsp;&nbsp;&nbsp;</label>
+      <select name="type" id="type">
         <option value="招聘信息">-招聘信息-</option>
         <option value="求职信息" selected>-求职信息-</option>
         <option value="培训信息">-培训信息-</option>
@@ -63,19 +70,20 @@ else
         <option value="公寓信息">-公寓信息-</option>
         <option value="寻人/物启示">-寻人/物启示-</option>
       </select>
+    </div>
       <input name="search" type="image" class="search" id="search" src="Images/btn1.gif" onClick="return chkinput(form)">           
     </form>
   </div>
 </div>
-<img src="Images/landian.gif" width="9" height="9">&nbsp;&nbsp;<strong>信息快速检索</strong>
 
-
-<td height="31" background="Images/line.gif">&nbsp;&nbsp;<img src="Images/landian.gif" width="9" height="9">&nbsp;&nbsp;<strong>联系我们</strong>
-
-
-<td align="center" valign="top" background="Images/line2.gif"><table width="190" border="0" cellspacing="0" cellpadding="0">
-<p>易查供求信息网</p>
-<td height="3" background="Images/tiao.gif">
-联系地址：吉林省长春市**街*号
-联系电话：849789**
-邮政编码：130000
+<div class="contactUs">
+  <div class="leftTitle">
+    <p>&nbsp;&nbsp;<img src="Images/landian.gif" width="9" height="9">&nbsp;&nbsp;<strong>联系我们</strong></p>
+  </div>
+  <div class="leftContent">
+    <p>易查供求信息网<br />
+       联系地址：吉林省长春市**街*号<br />
+       联系电话：849789** <br /> 
+       邮政编码：130000 
+  </div>
+</div>

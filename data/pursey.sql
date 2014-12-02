@@ -1,4 +1,4 @@
-CREATE DATABASE pursey;
+CREATE DATABASE `pursey` DEFAULT CHARACTER SET utf8;
 
 USE pursey;
 

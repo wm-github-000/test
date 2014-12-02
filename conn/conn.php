@@ -4,7 +4,7 @@ function dbConnect()
 	$db = new mysqli('localhost', 'pursey', 'password', 'pursey');
 	if(!$db)
 		return false;
-	$db->query('set names gb2312');
+	$db->query('set names utf-8');
 	return $db;	
 }
     // $conn=mysqli_connect("localhost","root","lingchen") or die("数据库服务器连接错误".mysql_error());

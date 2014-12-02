@@ -1,3 +1,7 @@
+* {margin: 0; padding: 0;}
+body {
+	margin: 0 auto;
+}
 .top {
 	margin: 0 auto;
 }
@@ -5,7 +9,13 @@
 	margin: 0 auto;
 	
 }
+.leftTitle {
+	background-image: url(images/line.gif);
+	/*background: images/line.gif;*/
+	/*border: 1px black solid;*/
+	width: 217px;
+	height: 27px;
+}
 .left {
-
-	/*float: left;*/
+	float: left;
 }

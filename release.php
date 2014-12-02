@@ -9,7 +9,7 @@
 	<div class="top"><?php include('top.php') ?></div>
 	<div class="content">
 		<div class="left"><?php include('left.php') ?></div>
-		<div class="main"><?php include('main.php') ?></div>
+		<div class="releaseContent"><?php include('release_page.php') ?></div>
 	</div>
 	<div class="bottom"><?php include('bottom.php') ?></div>
 </body>
