@@ -29,12 +29,32 @@ include_once("conn/conn.php");
   <div class="rightTitle">免费专区</div>
   <div class="rightContent">
 <?php
-$result=$conn->query("select count(*) as total from tb_info where type='公寓信息' and checkstate=1");
+// $result=$conn->query("select count(*) as total from tb_info where type='公寓信息' and checkstate=1");
+$query = "select * from tb_info where type='公寓信息'";
+$result = $conn->query($query);
 if($result->num_rows == 0)
   echo '<div>暂无公寓信息资源！</div>';
 else
 {
-// $info=$result->fetch_array();
+  while($info=$result->fetch_array())
+  {
+?>
+    <table width="540" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><?php echo $info['title']; ?></td>
+        <td><?php echo $info['edate']; ?></td>
+      </tr>
+      <tr>
+        <td colspan="2" ><?php echo $info['content']; ?></td>
+      </tr>
+      <tr>
+        <td><?php echo $info['linkman']; ?></td>
+        <td><?php echo $info['tel']; ?></td>
+      </tr>
+    </table><br /><br />
+<?php
+  }
+  // var_dump($info);
 // $total=$info[total];
 // $pagesize=4;
 //  if ($total<=$pagesize){
