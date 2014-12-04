@@ -1,21 +1,30 @@
 * {margin: 0; padding: 0;}
-body {
-	margin: 0 auto;
-}
 .top {
 	margin: 0 auto;
+	/*text-align: center; */
+	width: 700px;
 }
 .content {
 	margin: 0 auto;
+	width: 700px;
 	
-}
-.leftTitle {
-	background-image: url(images/line.gif);
-	/*background: images/line.gif;*/
-	/*border: 1px black solid;*/
-	width: 217px;
-	height: 27px;
 }
 .left {
 	float: left;
+}
+.leftTitle {
+	background-image: url(images/line.gif);
+	width: 217px;
+	height: 27px;
+}
+.bottom {
+	clear: both;
+	widows: 700px;
+	text-align: center;
+	background-image: url(images/bottom_bg.gif);
+}
+.releaseContent {
+	/*margin-left: 5px;*/
+	float: right;
+	width: 450px;
 }

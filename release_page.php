@@ -4,10 +4,10 @@
 	{
 		for(i = 0; i < form.length; i++)
 		{
-			if(form.element[i].value == '')
+			if(form.elements[i].value == '')
 			{
 				alert('请将信息填写完整');
-				form.element[i].focus();
+				form.elements[i].focus();
 				return false;
 			}
 		}
@@ -49,5 +49,5 @@
         	<label for="tel">联系电话：</label>
         	<input type="text" name="tel" id="tel">
         </p>
-        <input name="submit" type="image" src="images/fa.jpg" onClick="return checkForm(form);">
+        <input name="submit" type="image" src="images/fa.jpg" onClick="retrun checkForm(form);">
 	</form>
