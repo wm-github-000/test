@@ -2,6 +2,43 @@
 <?php 
 error_reporting(E_ERROR);
 include_once("conn/conn.php");
+$type = $_GET['type'];
+switch($type)
+{
+  case 'recuit':
+    $type = '招聘信息';
+    break;
+  case 'foster':
+    $type = '培训信息';
+    break;
+  case 'house':
+    $type = '房屋信息';
+    break;
+  case 'seekbuy':
+    $type = '求购信息';
+    break;
+  case 'recruitbusiness':
+    $type = '招商引资';
+    break;
+  case 'seekjob':
+    $type = '求职信息';
+    break;
+  case 'teaching':
+    $type = '家教信息';
+    break;
+  case 'car':
+    $type = '车辆信息';
+    break;
+  case 'sale':
+    $type = '出售信息';
+    break;
+  case 'search':
+    $type = '寻人/寻物启示';
+    break;
+  default:
+    $type = '公寓信息';
+    break;
+}
 ?>
 <div class="vip">
   <div class="rightTitle">
@@ -11,10 +48,10 @@ include_once("conn/conn.php");
 <?php
 	$date1=date("Y-m-d");
   $conn = dbConnect();
-	$result=$conn->query("select * from tb_leaguerinfo  where type='公寓信息' and showday>='$date1' and checkstate=1 ");
+	$result=$conn->query("select * from tb_leaguerinfo where type='$type' and showday>='$date1' and checkstate=1 ");
 	
 	if($result->num_rows == 0)
-    echo '<div>暂无公寓信息资源！</div>';
+    echo "<div>暂无".$type."资源！</div>";
   else
   {
     while($sgInfo=$result->fetch_array())
@@ -30,10 +67,10 @@ include_once("conn/conn.php");
   <div class="rightContent">
 <?php
 // $result=$conn->query("select count(*) as total from tb_info where type='公寓信息' and checkstate=1");
-$query = "select * from tb_info where type='公寓信息'";
+$query = "select * from tb_info where type='$type'";
 $result = $conn->query($query);
 if($result->num_rows == 0)
-  echo '<div>暂无公寓信息资源！</div>';
+  echo "<div>暂无".$type."资源！</div>";
 else
 {
   while($info=$result->fetch_array())
