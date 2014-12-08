@@ -50,16 +50,16 @@ else
     <p>&nbsp;&nbsp;<img src="images/landian.gif" alt="title">&nbsp;&nbsp;信息快速检索</p>
   </div>
   <div class="doSearch">
-    <form name="form1" method="post" action="findinfo.php"> 
+    <form name="form1" method="post" action="index.php?type=findInfo"> 
     <p>
       <label for="keywords">关键字：</label>
       <input type="text" id="keywords" name="keywords">
     </p>
     <div>
       <label for="type">条件：&nbsp;&nbsp;&nbsp;&nbsp;</label>
-      <select name="type" id="type">
-        <option value="招聘信息">-招聘信息-</option>
-        <option value="求职信息" selected>-求职信息-</option>
+      <select name="infoType" id="infoType">
+        <option value="招聘信息" selected="selected">-招聘信息-</option>
+        <option value="求职信息">-求职信息-</option>
         <option value="培训信息">-培训信息-</option>
         <option value="家教信息">-家教信息-</option>
         <option value="房屋信息">-房屋信息-</option>

@@ -35,6 +35,9 @@ switch($type)
   case 'search':
     $type = '寻人/寻物启示';
     break;
+  case 'findInfo':
+    $type = $_POST['infoType'];
+    $keywords = $_POST['keywords'];
   default:
     $type = '公寓信息';
     break;
@@ -48,7 +51,13 @@ switch($type)
 <?php
 	$date1=date("Y-m-d");
   $conn = dbConnect();
-	$result=$conn->query("select * from tb_leaguerinfo where type='$type' and showday>='$date1' and checkstate=1 ");
+  if(isset($keywords))
+  {
+    $query = "select * from tb_leaguerinfo where type='$type' and showday>='$date1' and checkstate=1 and (content like '%$keywords%' or title like '%$keywords%' or linkman like '%$keywords%' or tel like '%$keywords%')";
+  }
+  else
+    $query = "select * from tb_leaguerinfo where type='$type' and showday>='$date1' and checkstate=1 ";
+  $result=$conn->query($query);
 	
 	if($result->num_rows == 0)
     echo "<div>暂无".$type."资源！</div>";
@@ -67,7 +76,12 @@ switch($type)
   <div class="rightContent">
 <?php
 // $result=$conn->query("select count(*) as total from tb_info where type='公寓信息' and checkstate=1");
-$query = "select * from tb_info where type='$type'";
+if(isset($keywords))
+{
+  $query = "select * from tb_info where type='$type' and (content like '%$keywords%' or title like '%$keywords%' or linkman like '%$keywords%' or tel like '%$keywords%')";
+}
+else
+  $query = "select * from tb_info where type='$type'";
 $result = $conn->query($query);
 if($result->num_rows == 0)
   echo "<div>暂无".$type."资源！</div>";
