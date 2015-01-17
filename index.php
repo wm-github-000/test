@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>易查供求信息网</title>
+	<title>易查供求</title>
 	<link rel="stylesheet" type="text/css" href="css/style1.css">
 </head>
 <body>
@@ -11,6 +11,7 @@
 		<div class="left"><?php include('left.php') ?></div>
 		<div class="main"><?php include('main.php') ?></div>
 	</div>
+	<p>new line</p>
 	<div class="bottom"><?php include('bottom.php') ?></div>
 </body>
 </html>
