@@ -13,5 +13,6 @@
 	</div>
 	<p>new line</p>
 	<div class="bottom"><?php include('bottom.php') ?></div>
+	<p> other new line</p>
 </body>
 </html>
