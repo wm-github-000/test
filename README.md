@@ -6,7 +6,7 @@ This is a personal practice which writeten by php.It is a comprehensive website 
 Now I will commit it.
 oh I modified this file.
 i modified file.
-add new line.
+add new branch and merge it.
 
 
 add new line to test branch
