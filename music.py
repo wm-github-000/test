@@ -1,7 +1,8 @@
-import pygame
+import os
 import tkinter as tkr
 from tkinter.filedialog import askdirectory
-import os
+
+import pygame
 
 music_player = tkr.Tk()
 music_player.title("我的音乐播放器")
@@ -84,10 +85,51 @@ Button4 = tkr.Button(
     fg="white",
 )
 
-var = tkr.StringVar()
-song_title = tkr.Label(music_player, font="Helvetica 12 bold", textvariable=var)
+Button1 = tkr.Button(
+    music_player,
+    width=5,
+    height=3,
+    font="Helvetica 12 bold",
+    text="播放",
+    command=play,
+    bg="blue",
+    fg="white",
+)
+Button2 = tkr.Button(
+    music_player,
+    width=5,
+    height=3,
+    font="Helvetica 12 bold",
+    text="停止",
+    command=stop,
+    bg="red",
+    fg="white",
+)
+Button3 = tkr.Button(
+    music_player,
+    width=5,
+    height=3,
+    font="Helvetica 12 bold",
+    text="暂停",
+    command=pause,
+    bg="purple",
+    fg="white",
+)
+Button4 = tkr.Button(
+    music_player,
+    width=5,
+    height=3,
+    font="Helvetica 12 bold",
+    text="取消暂停",
+    command=unpause,
+    bg="orange",
+    fg="white",
+)
 
-song_title.pack()
+var = tkr.StringVar()
+song_titl = tkr.Label(music_player, font="Helvetica 12 bold", textvariable=var)
+
+song_titl.pack()
 Button1.pack(fill="x")
 Button2.pack(fill="x")
 Button3.pack(fill="x")
