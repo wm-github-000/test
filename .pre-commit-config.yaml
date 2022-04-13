@@ -1,11 +1,22 @@
 repos:
--   repo: https://github.com/pre-commit/pre-commit-hooks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v2.3.0
     hooks:
-    -   id: check-yaml
-    -   id: end-of-file-fixer #文件最后一行是空行
-    -   id: trailing-whitespace #将第一行代码末尾的空格移除
--   repo: https://github.com/psf/black
+      - id: check-yaml
+      - id: end-of-file-fixer #文件最后一行是空行
+      - id: trailing-whitespace #将第一行代码末尾的空格移除
+
+  - repo: https://github.com/PyCQA/isort
+    rev: 5.8.0
+    hooks:
+      - id: isort #格式化工具
+
+  - repo: https://github.com/PyCQA/flake8
+    rev: 3.9.2
+    hooks:
+      - id: flake8 #python代码风格化检查
+
+  - repo: https://github.com/psf/black
     rev: 21.12b0
     hooks:
-    -   id: black #格式化工具
+      - id: black #格式化工具
