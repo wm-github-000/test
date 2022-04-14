@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *.py[cod]
 
 # C extensions
@@ -53,3 +54,6 @@ Session.vim
 *~
 
 /pipreqs/*.bak
+=======
+*.txt
+>>>>>>> fa7b9328b79fd9a19c8bc4a06f577f10d2456f94

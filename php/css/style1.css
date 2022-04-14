@@ -1,0 +1,30 @@
+* {margin: 0; padding: 0;}
+.top {
+	margin: 0 auto;
+	/*text-align: center; */
+	width: 700px;
+}
+.content {
+	margin: 0 auto;
+	width: 700px;
+
+}
+.left {
+	float: left;
+}
+.leftTitle {
+	background-image: url(images/line.gif);
+	width: 217px;
+	height: 27px;
+}
+.bottom {
+	clear: both;
+	widows: 700px;
+	text-align: center;
+	background-image: url(images/bottom_bg.gif);
+}
+.releaseContent {
+	/*margin-left: 5px;*/
+	float: right;
+	width: 450px;
+}

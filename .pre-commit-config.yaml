@@ -11,10 +11,10 @@ repos:
     hooks:
       - id: isort #格式化工具
 
-#  - repo: https://github.com/PyCQA/flake8
-#    rev: 3.9.2
-#    hooks:
-#      - id: flake8 #python代码风格化检查
+  - repo: https://github.com/PyCQA/flake8
+    rev: 3.9.2
+    hooks:
+      - id: flake8 #python代码风格化检查
 
   - repo: https://github.com/psf/black
     rev: 21.12b0
